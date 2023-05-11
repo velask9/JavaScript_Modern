@@ -81,11 +81,44 @@ const ex2 = () => {
         interleave(array1, array2);
       };
 
+     
+     
+     
+     
+     
+      const ex4 = () => {
+        const palindrome = (basicString) => {
+         //Converting string variables into arrays. 
+            let workingarray =[...string]
+        // setting default to be true. 
+        let result = true 
+        for (let i=0; i<workingarray.length/2; i++) {
+            if(workingarray[i] !==workingarray[workingarray.length-1-i]){
+                result = false
+            }
+        }
+            
+        
+            
+         console.log(result) 
+        }
+        
+        
+        //Test case 1:
+       const string='radar';
+
+        //Test case 2:
+        //  const string='month';
+        palindrome(string)
+
+
+    }
 
 const main = async () => {
     ex1();
     ex2();
     ex3();
+    ex4();
 }
 
 main();
