@@ -53,18 +53,39 @@ const ex2 = () => {
 
 
 
-const ex3 = () => {
-    // TODO...
-}
-
-//
-// Your functions here...
-//
+    const ex3 = () => {
+        const interleave = (array1, array2) => {
+          let interArray = [];
+      
+          //   Comparing the length of both lists (arrays)
+          if (array1.length != array2.length) {
+            // Creating a message if the arrays do not match
+            console.log("ERROR: Array length mismatch");
+          } else {
+            //    We are pushing the elements into the blank array. Creating a loop with the [i] for every number.
+            for (let i = 0; i < array1.length; i++) {
+              interArray.push(array1[i], array2[i]);
+            }
+            console.log(interArray.join(""));
+          }
+        };
+      
+        // Test Case #1
+        const array1 = [1, 2, 3, 4, 5];
+          const array2 = ["a", "b", "c", "d", "e"];
+      
+        //test case #2
+      //   const array1 = [1, 2];
+      //   const array2 = ["a", "b", "c", "d", "e"];
+      
+        interleave(array1, array2);
+      };
 
 
 const main = async () => {
     ex1();
     ex2();
+    ex3();
 }
 
 main();
